@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import Landmarks from '@/components/landmarks';
 import { Phone, MapPin } from 'lucide-react';
 
 export default function LocationSection() {
@@ -48,7 +47,6 @@ export default function LocationSection() {
                    </div>
                 </div>
               </div>
-              <Landmarks />
               <Button asChild size="lg" className="mt-8 w-full">
                 <Link href="https://www.google.com/maps/dir/?api=1&destination=17.5913423,78.0754515" target="_blank" rel="noopener noreferrer">
                   Get Directions
