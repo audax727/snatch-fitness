@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
@@ -18,8 +18,10 @@ const navItems = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
@@ -41,6 +43,42 @@ export default function Header() {
       ))}
     </>
   );
+  
+  const MobileMenu = () => {
+    if (!isClient) {
+      // Render a static button on the server and for initial client render to avoid hydration mismatch
+      return (
+        <Button variant="ghost" size="icon">
+          <Menu className="h-6 w-6 text-white" />
+          <span className="sr-only">Open menu</span>
+        </Button>
+      );
+    }
+
+    return (
+      <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+        <SheetTrigger asChild>
+          <Button variant="ghost" size="icon">
+            <Menu className="h-6 w-6 text-white" />
+            <span className="sr-only">Open menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="right" className="w-full bg-black/95 p-6 text-white">
+          <div className="flex flex-col items-center justify-center h-full">
+            <Link href="/" className="mb-12 text-3xl font-bold font-headline text-white">
+              BE <span className="text-primary">FIT</span>
+            </Link>
+            <nav className="flex flex-col items-center gap-8 text-center">
+              <NavLinks />
+              <Button asChild size="lg" className="mt-8">
+                  <Link href="#membership">Join Now</Link>
+              </Button>
+            </nav>
+          </div>
+        </SheetContent>
+      </Sheet>
+    );
+  };
 
   return (
     <header
@@ -63,27 +101,7 @@ export default function Header() {
             <Link href="#membership">Join Now</Link>
           </Button>
           <div className="md:hidden">
-            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6 text-white" />
-                  <span className="sr-only">Open menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-full bg-black/95 p-6 text-white">
-                <div className="flex flex-col items-center justify-center h-full">
-                  <Link href="/" className="mb-12 text-3xl font-bold font-headline text-white">
-                    BE <span className="text-primary">FIT</span>
-                  </Link>
-                  <nav className="flex flex-col items-center gap-8 text-center">
-                    <NavLinks />
-                    <Button asChild size="lg" className="mt-8">
-                       <Link href="#membership">Join Now</Link>
-                    </Button>
-                  </nav>
-                </div>
-              </SheetContent>
-            </Sheet>
+            <MobileMenu />
           </div>
         </div>
       </div>
