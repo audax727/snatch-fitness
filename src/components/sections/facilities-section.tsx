@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Activity, Users, Target, Lock, ShoppingBag, Weight } from 'lucide-react';
+import { Activity, Target, Weight } from 'lucide-react';
 
 const facilities = [
   {
@@ -13,24 +13,9 @@ const facilities = [
     icon: Weight
   },
   {
-    title: "Group Classes",
-    description: "HIIT, Yoga, Zumba, and specialized training sessions.",
-    icon: Users
-  },
-  {
     title: "Personal Training",
     description: "One-on-one coaching with certified professionals.",
     icon: Target
-  },
-  {
-    title: "Modern Locker Rooms",
-    description: "Clean, spacious facilities with modern amenities.",
-    icon: Lock
-  },
-  {
-    title: "Supplement Store",
-    description: "Premium nutrition products and expert guidance.",
-    icon: ShoppingBag
   }
 ];
 
