@@ -1,17 +1,10 @@
 import Link from 'next/link';
-import { Instagram, Facebook, Youtube } from 'lucide-react';
-
-const socialLinks = [
-  { href: '#', icon: Instagram, name: 'Instagram' },
-  { href: '#', icon: Facebook, name: 'Facebook' },
-  { href: '#', icon: Youtube, name: 'YouTube' },
-];
 
 export default function Footer() {
   return (
     <footer className="bg-black text-neutral-300 py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <h3 className="text-2xl font-bold font-headline text-white mb-4">
               BE <span className="text-primary">FIT</span>
@@ -40,16 +33,6 @@ export default function Footer() {
               <li>+91 9966509990</li>
               <li>+91 7644019999</li>
             </ul>
-          </div>
-          <div>
-            <h4 className="font-headline text-lg font-bold text-white mb-4">Follow Us</h4>
-            <div className="flex space-x-4">
-              {socialLinks.map(social => (
-                <a key={social.name} href={social.href} aria-label={social.name} className="text-neutral-400 hover:text-primary transition-colors">
-                  <social.icon className="h-6 w-6" />
-                </a>
-              ))}
-            </div>
           </div>
         </div>
         <div className="mt-12 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-500 font-body">
