@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
 
 const plans = [
   {
@@ -54,6 +55,13 @@ const plans = [
 ];
 
 export default function MembershipSection() {
+  const whatsappNumber = "919966509990";
+  const getWhatsappUrl = (planName: string) => {
+    const message = `Hi, I'm interested in the ${planName} plan at Be Fit Gym. Can you provide more information?`;
+    const encodedMessage = encodeURIComponent(message);
+    return `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+  };
+
   return (
     <section id="membership" className="bg-black py-20 sm:py-28">
       <div className="container mx-auto px-4">
@@ -97,7 +105,11 @@ export default function MembershipSection() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full text-lg" variant={plan.popular ? 'default' : 'secondary'}>{plan.cta}</Button>
+                <Button asChild className="w-full text-lg" variant={plan.popular ? 'default' : 'secondary'}>
+                  <Link href={getWhatsappUrl(plan.name)} target="_blank" rel="noopener noreferrer">
+                    {plan.cta}
+                  </Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}
