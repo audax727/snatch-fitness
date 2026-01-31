@@ -8,6 +8,7 @@ import InsideBefitSection from '@/components/sections/inside-befit-section';
 import MembershipSection from '@/components/sections/membership-section';
 import LocationSection from '@/components/sections/location-section';
 import CtaSection from '@/components/sections/cta-section';
+import TestimonialsSection from '@/components/sections/testimonials-section';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <FacilitiesSection />
         <InsideBefitSection />
         <MembershipSection />
+        <TestimonialsSection />
         <LocationSection />
         <CtaSection />
       </main>
