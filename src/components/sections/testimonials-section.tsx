@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-          <div className="group flex w-full overflow-hidden [--gap:1rem] sm:[--gap:1.5rem] [--duration:60s]">
+          <div className="group flex w-full overflow-hidden [--gap:1rem] sm:[--gap:1.5rem] [--duration:20s]">
             <div className="flex shrink-0 animate-marquee [gap:var(--gap)] group-hover:[animation-play-state:paused]">
               {testimonials.map((testimonial, i) => (
                 <TestimonialCard 
