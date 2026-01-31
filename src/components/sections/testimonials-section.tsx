@@ -21,18 +21,6 @@ const testimonials1: Testimonial[] = [
     name: "Priya Patel",
     role: "Doctor",
   },
-  {
-    text: "The best gym in Sangareddy, hands down. The equipment is top-notch and always clean.",
-    image: PlaceHolderImages.find(img => img.id === 'testimonial-3')?.imageUrl || "https://picsum.photos/seed/t3/100/100",
-    name: "Rohan Gupta",
-    role: "Businessman",
-  },
-  {
-    text: "Losing 15kgs seemed impossible, but Be Fit made it happen. Forever grateful!",
-    image: PlaceHolderImages.find(img => img.id === 'testimonial-4')?.imageUrl || "https://picsum.photos/seed/t4/100/100",
-    name: "Sunita Reddy",
-    role: "Homemaker",
-  },
 ];
 
 const testimonials2: Testimonial[] = [
@@ -47,18 +35,6 @@ const testimonials2: Testimonial[] = [
     image: PlaceHolderImages.find(img => img.id === 'testimonial-6')?.imageUrl || "https://picsum.photos/seed/t6/100/100",
     name: "Anjali Rao",
     role: "Cricketer",
-  },
-   {
-    text: "The atmosphere is electric! I always leave feeling energized and accomplished.",
-    image: PlaceHolderImages.find(img => img.id === 'testimonial-7')?.imageUrl || "https://picsum.photos/seed/t7/100/100",
-    name: "Imran Khan",
-    role: "Architect",
-  },
-  {
-    text: "I was new to fitness, but the trainers were patient and guided me perfectly. I feel fantastic!",
-    image: PlaceHolderImages.find(img => img.id === 'testimonial-8')?.imageUrl || "https://picsum.photos/seed/t8/100/100",
-    name: "Divya Nair",
-    role: "Teacher",
   },
 ];
 
