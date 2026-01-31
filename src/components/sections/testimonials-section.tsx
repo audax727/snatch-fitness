@@ -55,13 +55,13 @@ export default function TestimonialsSection() {
           <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase">
             Success <span className="text-primary">Stories</span>
           </h2>
-          <p className="mt-4 font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-4 font-body text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             {description}
           </p>
         </div>
 
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-          <div className="group flex w-full overflow-hidden [--gap:1.5rem] [--duration:60s]">
+          <div className="group flex w-full overflow-hidden [--gap:1rem] sm:[--gap:1.5rem] [--duration:60s]">
             <div className="flex shrink-0 animate-marquee [gap:var(--gap)] group-hover:[animation-play-state:paused]">
               {testimonials.map((testimonial, i) => (
                 <TestimonialCard 

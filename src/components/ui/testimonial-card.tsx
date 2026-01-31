@@ -17,7 +17,7 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ author, text, href, className }: TestimonialCardProps) {
   const cardContent = (
-    <div className="flex h-full flex-col justify-between rounded-lg border bg-card p-6 text-card-foreground shadow-sm w-[350px] transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+    <div className="flex h-full flex-col justify-between rounded-lg border bg-card p-6 text-card-foreground shadow-sm w-[300px] sm:w-[350px] transition-transform duration-300 hover:scale-105 hover:shadow-xl">
       <div className="flex-grow font-body text-base">
         <p>"{text}"</p>
       </div>
