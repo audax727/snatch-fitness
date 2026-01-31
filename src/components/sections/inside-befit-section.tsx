@@ -11,7 +11,7 @@ export default function InsideBefitSection() {
     <section id="inside-befit" className="bg-black py-20 sm:py-28 relative overflow-x-hidden">
         <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-white uppercase">
+            <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-white uppercase">
                 Inside <span className="text-primary">Be-Fit</span>
             </h2>
             <p className="mt-4 font-body text-lg text-neutral-300">
@@ -25,7 +25,7 @@ export default function InsideBefitSection() {
             {duplicatedImages.map((image, index) => (
                 <div
                     key={`${image.id}-${index}`}
-                    className="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-primary/30"
+                    className="flex-shrink-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-primary/30"
                 >
                     <Image
                         src={image.imageUrl}

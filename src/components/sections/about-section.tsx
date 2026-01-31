@@ -13,7 +13,7 @@ export default function AboutSection() {
     <section id="about" className="bg-black py-20 sm:py-28">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-white uppercase">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-white uppercase">
             Where <span className="text-primary">Champions</span> Are Made
           </h2>
           <p className="mt-4 font-body text-lg text-neutral-300">
@@ -26,7 +26,7 @@ export default function AboutSection() {
               <div className="flex justify-center mb-4">
                 <stat.icon className="h-12 w-12 text-primary" />
               </div>
-              <div className="font-accent font-bold text-5xl text-white">
+              <div className="font-accent font-bold text-4xl sm:text-5xl text-white">
                 <AnimatedCounter target={stat.number} />
                 {stat.number === 24 ? '/7' : '+'}
               </div>

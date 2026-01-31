@@ -12,7 +12,7 @@ export default function CtaSection() {
   return (
     <section className="py-20 sm:py-28 bg-gradient-to-r from-primary via-red-700 to-red-800 text-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="font-headline text-4xl md:text-5xl font-extrabold uppercase">
+        <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase">
           Ready to Start Your Transformation?
         </h2>
         <p className="mt-4 font-body text-lg max-w-2xl mx-auto">

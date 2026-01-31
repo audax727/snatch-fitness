@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
     <section id="testimonials" className="bg-background py-20 sm:py-28 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-foreground uppercase">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground uppercase">
             Success <span className="text-primary">Stories</span>
           </h2>
           <p className="mt-4 font-body text-lg text-muted-foreground">

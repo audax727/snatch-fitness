@@ -27,7 +27,7 @@ export default function HeroSection() {
           <br />
           Transform Your <span className="text-primary">Life</span>
         </h1>
-        <p className="mt-6 max-w-2xl font-body text-lg md:text-xl text-neutral-300">
+        <p className="mt-6 max-w-2xl font-body text-base sm:text-lg md:text-xl text-neutral-300">
           Premium fitness facility in Sangareddy with state-of-the-art equipment and expert trainers.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4">

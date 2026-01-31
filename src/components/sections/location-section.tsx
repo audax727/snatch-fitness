@@ -9,7 +9,7 @@ export default function LocationSection() {
     <section id="contact" className="bg-neutral-100 py-20 sm:py-28">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-neutral-900 uppercase">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-neutral-900 uppercase">
             <span className="text-primary">Find</span> Us
           </h2>
         </div>
