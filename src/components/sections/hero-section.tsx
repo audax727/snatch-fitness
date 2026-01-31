@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-red-900/40" />
       
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4">
-        <h1 className="font-headline font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-wider leading-tight">
+        <h1 className="font-headline font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-wider leading-tight">
           Transform Your Body,
           <br />
           Transform Your <span className="text-primary">Life</span>
