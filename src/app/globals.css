@@ -70,3 +70,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .scroll-container {
+    -webkit-mask: linear-gradient(to right, transparent 0, black 20%, black 80%, transparent 100%);
+    mask: linear-gradient(to right, transparent 0, black 20%, black 80%, transparent 100%);
+  }
+}
