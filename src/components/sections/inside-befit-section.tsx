@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react";
-import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
 import {
@@ -13,10 +11,6 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function InsideBefitSection() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
-
   const insideImages = PlaceHolderImages.filter(img => img.id.startsWith('inside-'));
 
   return (
@@ -31,10 +25,7 @@ export default function InsideBefitSection() {
           </p>
         </div>
         <Carousel
-          plugins={[plugin.current]}
           className="w-full"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
           opts={{
             loop: true,
           }}
