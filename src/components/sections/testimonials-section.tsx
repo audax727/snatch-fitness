@@ -1,62 +1,89 @@
-import { TestimonialsColumn } from "@/components/testimonials-column";
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { cn } from "@/lib/utils"
+import { TestimonialCard, TestimonialAuthor } from "@/components/ui/testimonial-card"
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
-type Testimonial = {
-  text: string;
-  image: string;
-  name: string;
-  role: string;
-};
-
-const testimonials1: Testimonial[] = [
+const testimonials: Array<{
+  author: TestimonialAuthor
+  text: string
+  href?: string
+}> = [
   {
-    text: "This gym changed my life! The trainers are so supportive and the community is amazing.",
-    image: PlaceHolderImages.find(img => img.id === 'testimonial-1')?.imageUrl || "https://picsum.photos/seed/t1/100/100",
-    name: "Aarav Sharma",
-    role: "Software Engineer",
+    author: {
+      name: "Aarav Sharma",
+      role: "Software Engineer",
+      image: PlaceHolderImages.find(img => img.id === 'testimonial-1')?.imageUrl || "https://picsum.photos/seed/t1/100/100",
+    },
+    text: "This gym changed my life! The trainers are so supportive and the community is amazing."
   },
   {
-    text: "I've never felt stronger or more confident. The personalized training plans are a game-changer.",
-    image: PlaceHolderImages.find(img => img.id === 'testimonial-2')?.imageUrl || "https://picsum.photos/seed/t2/100/100",
-    name: "Priya Patel",
-    role: "Doctor",
-  },
-];
-
-const testimonials2: Testimonial[] = [
-  {
-    text: "The group classes are so much fun and keep me motivated every single day.",
-    image: PlaceHolderImages.find(img => img.id === 'testimonial-5')?.imageUrl || "https://picsum.photos/seed/t5/100/100",
-    name: "Vikram Singh",
-    role: "College Student",
+    author: {
+      name: "Priya Patel",
+      role: "Doctor",
+      image: PlaceHolderImages.find(img => img.id === 'testimonial-2')?.imageUrl || "https://picsum.photos/seed/t2/100/100",
+    },
+    text: "I've never felt stronger or more confident. The personalized training plans are a game-changer."
   },
   {
-    text: "As a professional athlete, I need the best. Be Fit provides exactly that. Highly recommended.",
-    image: PlaceHolderImages.find(img => img.id === 'testimonial-6')?.imageUrl || "https://picsum.photos/seed/t6/100/100",
-    name: "Anjali Rao",
-    role: "Cricketer",
+    author: {
+      name: "Vikram Singh",
+      role: "College Student",
+      image: PlaceHolderImages.find(img => img.id === 'testimonial-5')?.imageUrl || "https://picsum.photos/seed/t5/100/100",
+    },
+    text: "The group classes are so much fun and keep me motivated every single day."
+  },
+  {
+    author: {
+      name: "Anjali Rao",
+      role: "Cricketer",
+      image: PlaceHolderImages.find(img => img.id === 'testimonial-6')?.imageUrl || "https://picsum.photos/seed/t6/100/100",
+    },
+    text: "As a professional athlete, I need the best. Be Fit provides exactly that. Highly recommended."
   },
 ];
 
 export default function TestimonialsSection() {
+  const title = "Success Stories";
+  const description = "See what our members are saying about their transformations at Be Fit.";
+
   return (
-    <section id="testimonials" className="bg-background py-20 sm:py-28 relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground uppercase">
+    <section id="testimonials" className={cn(
+      "bg-background text-foreground",
+      "py-20 sm:py-28"
+    )}>
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-16 text-center">
+        <div className="flex flex-col items-center gap-4 px-4">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase">
             Success <span className="text-primary">Stories</span>
           </h2>
-          <p className="mt-4 font-body text-lg text-muted-foreground">
-            See what our members are saying about their transformations at Be Fit.
+          <p className="mt-4 font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+            {description}
           </p>
         </div>
+
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+          <div className="group flex w-full overflow-hidden [--gap:1.5rem] [--duration:60s]">
+            <div className="flex shrink-0 animate-marquee [gap:var(--gap)] group-hover:[animation-play-state:paused]">
+              {testimonials.map((testimonial, i) => (
+                <TestimonialCard 
+                  key={`testimonial-a-${i}`}
+                  {...testimonial}
+                />
+              ))}
+            </div>
+            <div className="flex shrink-0 animate-marquee [gap:var(--gap)] group-hover:[animation-play-state:paused]" aria-hidden="true">
+              {testimonials.map((testimonial, i) => (
+                <TestimonialCard 
+                  key={`testimonial-b-${i}`}
+                  {...testimonial}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/4 bg-gradient-to-r from-background sm:block" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/4 bg-gradient-to-l from-background sm:block" />
+        </div>
       </div>
-      <div className="flex justify-center gap-6 mt-16 [mask-image:linear-gradient(to_bottom,transparent_0%,black_15%,black_85%,transparent_100%)]">
-        <TestimonialsColumn testimonials={testimonials1} duration={25} />
-        <TestimonialsColumn testimonials={testimonials2} className="hidden md:flex" duration={30} />
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
     </section>
   );
 }
