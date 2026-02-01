@@ -8,7 +8,7 @@ import Link from 'next/link';
 const plans = [
   {
     name: "1 Month",
-    price: "₹2,999",
+    price: "₹2,500",
     features: [
       "Gym Access",
       "Basic Equipment",
@@ -19,8 +19,8 @@ const plans = [
   },
   {
     name: "3 Months",
-    price: "₹7,999",
-    original_price: "₹8,997",
+    price: "₹6,999",
+    original_price: "₹7,500",
     features: [
       "Full Gym Access",
       "All Equipment",
@@ -33,8 +33,8 @@ const plans = [
   },
   {
     name: "12 Months",
-    price: "₹24,999",
-    original_price: "₹35,988",
+    price: "₹20,999",
+    original_price: "₹30,000",
     features: [
       "Unlimited Gym Access",
       "Priority Equipment",
