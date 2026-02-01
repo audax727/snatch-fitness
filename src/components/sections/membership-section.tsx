@@ -1,14 +1,13 @@
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 
 const plans = [
   {
-    name: "STARTER",
-    duration: "1 Month",
+    name: "1 Month",
     price: "₹2,999",
     features: [
       "Gym Access",
@@ -20,8 +19,7 @@ const plans = [
     popular: false
   },
   {
-    name: "WARRIOR",
-    duration: "3 Months",
+    name: "3 Months",
     price: "₹7,999",
     original_price: "₹8,997",
     features: [
@@ -36,8 +34,7 @@ const plans = [
     popular: true
   },
   {
-    name: "CHAMPION",
-    duration: "12 Months",
+    name: "12 Months",
     price: "₹24,999",
     original_price: "₹35,988",
     features: [
@@ -88,7 +85,6 @@ export default function MembershipSection() {
               )}
               <CardHeader className="text-center">
                 <CardTitle className="font-accent text-2xl sm:text-3xl font-bold uppercase text-primary">{plan.name}</CardTitle>
-                <CardDescription className="font-body">{plan.duration}</CardDescription>
                 <div className="py-4">
                   <span className="font-accent text-4xl sm:text-5xl font-extrabold text-white">{plan.price}</span>
                   {plan.original_price && <span className="text-lg text-neutral-400 line-through ml-2">{plan.original_price}</span>}
