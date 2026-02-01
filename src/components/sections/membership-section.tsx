@@ -40,8 +40,7 @@ const plans = [
       "Priority Equipment",
       "All Group Classes",
       "Customized Diet Plan",
-      "Supplement Guidance",
-      "Free Gym Merchandise"
+      "Supplement Guidance"
     ],
     cta: "Choose Plan",
     popular: false
