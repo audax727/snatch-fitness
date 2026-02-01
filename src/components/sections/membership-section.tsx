@@ -12,7 +12,6 @@ const plans = [
     features: [
       "Gym Access",
       "Basic Equipment",
-      "Locker Facility",
       "Trainer Consultation"
     ],
     cta: "Get Started",
@@ -26,7 +25,6 @@ const plans = [
       "Full Gym Access",
       "All Equipment",
       "Group Classes",
-      "Personal Training (2 sessions)",
       "Nutrition Guidance",
       "Progress Tracking"
     ],
@@ -41,7 +39,6 @@ const plans = [
       "Unlimited Gym Access",
       "Priority Equipment",
       "All Group Classes",
-      "Personal Training (8 sessions)",
       "Customized Diet Plan",
       "Supplement Guidance",
       "Free Gym Merchandise"
