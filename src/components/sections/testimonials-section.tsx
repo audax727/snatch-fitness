@@ -9,35 +9,35 @@ const testimonials: Array<{
 }> = [
   {
     author: {
-      name: "Aarav Sharma",
-      role: "Software Engineer",
+      name: "Shaik Mazher Ali",
+      role: "Member",
       image: PlaceHolderImages.find(img => img.id === 'testimonial-1')?.imageUrl || "https://picsum.photos/seed/t1/100/100",
     },
-    text: "This gym changed my life! The trainers are so supportive and the community is amazing."
+    text: "It's the best gym in Sangareddy, that's worth its value, spacious and clean. The vibe is fantastic. Perfect place to workout."
   },
   {
     author: {
-      name: "Priya Patel",
-      role: "Doctor",
+      name: "Rahul Adyanthaya",
+      role: "Member",
       image: PlaceHolderImages.find(img => img.id === 'testimonial-2')?.imageUrl || "https://picsum.photos/seed/t2/100/100",
     },
-    text: "I've never felt stronger or more confident. The personalized training plans are a game-changer."
+    text: "Be Fit stands out as one of the best gyms in the area, offering top-notch equipment and a well-maintained workout environment."
   },
   {
     author: {
-      name: "Vikram Singh",
-      role: "College Student",
+      name: "Rishit Karia",
+      role: "Member",
       image: PlaceHolderImages.find(img => img.id === 'testimonial-5')?.imageUrl || "https://picsum.photos/seed/t5/100/100",
     },
-    text: "The group classes are so much fun and keep me motivated every single day."
+    text: "One of the best gyms I have been to. Well-maintained equipment, great trainers, friendly staff and at a reasonable price. 10/10 recommended!"
   },
   {
     author: {
-      name: "Anjali Rao",
-      role: "Cricketer",
+      name: "Gym Member",
+      role: "Member",
       image: PlaceHolderImages.find(img => img.id === 'testimonial-6')?.imageUrl || "https://picsum.photos/seed/t6/100/100",
     },
-    text: "As a professional athlete, I need the best. Be Fit provides exactly that. Highly recommended."
+    text: "The best place to workout with all high-class facilities and equipment!"
   },
 ];
 
