@@ -8,21 +8,21 @@
     },
     {
       "id": "inside-1",
-      "description": "A wide shot of the gym floor showing various equipment.",
-      "imageUrl": "https://images.unsplash.com/photo-1685633225086-a762f29f2d03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxneW0lMjBmbG9vcnxlbnwwfHx8fDE3Njk4NjcxNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "gym floor"
+      "description": "View of gym equipment from above.",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipMG5qzQI7eLEW54xQZQBQx2xspjgZ4jn8_LzndK",
+      "imageHint": "gym equipment"
     },
     {
       "id": "inside-2",
-      "description": "Close-up of dumbbells on a rack.",
-      "imageUrl": "https://images.unsplash.com/photo-1575507440599-d990adbe4b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z3ltJTIwZHVtYmJlbGxzfGVufDB8fHx8MTc2OTg2NzE1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "gym dumbbells"
+      "description": "Treadmills and cardio area.",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipNywqj2YYfhAQFxr6PV-V6A2e-nnGmGjfzeV07-",
+      "imageHint": "gym cardio"
     },
     {
       "id": "inside-3",
-      "description": "Cardio machines lined up near a window.",
-      "imageUrl": "https://images.unsplash.com/photo-1662386392805-573808794a21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxneW0lMjBjYXJkaW98ZW58MHx8fHwxNzY5ODY3MTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "gym cardio"
+      "description": "Strength training machines and weights area.",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipM2G9r2W1WYhwcDEy8Re81doTcNwQ3W02TL5N7-",
+      "imageHint": "strength training"
     },
     {
       "id": "inside-4",
