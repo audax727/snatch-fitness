@@ -15,6 +15,22 @@ const navItems = [
   { href: '#contact', label: 'Contact' },
 ];
 
+const NavLinks = ({ onLinkClick }: { onLinkClick?: () => void }) => (
+  <>
+    {navItems.map((item) => (
+      <Link
+        key={item.label}
+        href={item.href}
+        onClick={onLinkClick}
+        className="font-body text-sm font-medium text-neutral-300 transition-colors hover:text-primary"
+      >
+        {item.label}
+      </Link>
+    ))}
+  </>
+);
+
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,47 +47,6 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const NavLinks = () => (
-    <>
-      {navItems.map((item) => (
-        <Link
-          key={item.label}
-          href={item.href}
-          onClick={() => setMobileMenuOpen(false)}
-          className="font-body text-sm font-medium text-neutral-300 transition-colors hover:text-primary"
-        >
-          {item.label}
-        </Link>
-      ))}
-    </>
-  );
-  
-  const MobileMenu = () => {
-    return (
-      <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-        <SheetTrigger asChild>
-          <Button variant="ghost" size="icon">
-            <Menu className="h-6 w-6 text-white" />
-            <span className="sr-only">Open menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="right" className="w-full bg-black/95 p-6 text-white">
-          <div className="flex flex-col items-center justify-center h-full">
-            <Link href="/" className="mb-12 text-3xl font-bold font-headline text-white">
-              BE <span className="text-primary">FIT</span>
-            </Link>
-            <nav className="flex flex-col items-center gap-8 text-center">
-              <NavLinks />
-              <Button asChild size="lg" className="mt-8">
-                  <Link href="#membership">Join Now</Link>
-              </Button>
-            </nav>
-          </div>
-        </SheetContent>
-      </Sheet>
-    );
-  };
 
   return (
     <header
@@ -94,7 +69,29 @@ export default function Header() {
             <Link href="#membership">Join Now</Link>
           </Button>
           <div className="md:hidden">
-            {isMounted && <MobileMenu />}
+            {isMounted && (
+              <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6 text-white" />
+                    <span className="sr-only">Open menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-full bg-black/95 p-6 text-white">
+                  <div className="flex flex-col items-center justify-center h-full">
+                    <Link href="/" className="mb-12 text-3xl font-bold font-headline text-white" onClick={() => setMobileMenuOpen(false)}>
+                      BE <span className="text-primary">FIT</span>
+                    </Link>
+                    <nav className="flex flex-col items-center gap-8 text-center">
+                      <NavLinks onLinkClick={() => setMobileMenuOpen(false)} />
+                      <Button asChild size="lg" className="mt-8" onClick={() => setMobileMenuOpen(false)}>
+                          <Link href="#membership">Join Now</Link>
+                      </Button>
+                    </nav>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            )}
           </div>
         </div>
       </div>
