@@ -38,14 +38,15 @@ export default function Header() {
 
   useEffect(() => {
     setIsMounted(true);
-  }, []);
 
-  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
