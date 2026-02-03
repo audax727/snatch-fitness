@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 
 export default function InsideBefitSection() {
   const images = PlaceHolderImages.filter((img) => img.id.startsWith('inside-'));
@@ -32,7 +33,10 @@ export default function InsideBefitSection() {
                         alt={image.description}
                         width={400}
                         height={400}
-                        className="w-full h-full object-cover"
+                        className={cn(
+                            "w-full h-full",
+                            image.id === 'inside-4' ? 'object-contain bg-black' : 'object-cover'
+                        )}
                         data-ai-hint={image.imageHint}
                         loading="lazy"
                     />
