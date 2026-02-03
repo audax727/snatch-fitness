@@ -18,10 +18,8 @@ const navItems = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
@@ -45,16 +43,6 @@ export default function Header() {
   );
   
   const MobileMenu = () => {
-    if (!isClient) {
-      // Render a static button on the server and for initial client render to avoid hydration mismatch
-      return (
-        <Button variant="ghost" size="icon">
-          <Menu className="h-6 w-6 text-white" />
-          <span className="sr-only">Open menu</span>
-        </Button>
-      );
-    }
-
     return (
       <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
         <SheetTrigger asChild>
