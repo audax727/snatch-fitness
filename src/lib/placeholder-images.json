@@ -25,6 +25,18 @@
       "imageHint": "strength training"
     },
     {
+      "id": "inside-4",
+      "description": "Gym interior view with equipment",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipPrM9lh9wTa6sfGBVfII65Z7wokxMsCmxbx4wNG",
+      "imageHint": "gym equipment"
+    },
+    {
+      "id": "inside-5",
+      "description": "Dumbbell rack",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipPs2akhWZrL2OMXzbsHK_BVa2aWAIFFSYRFaoWi",
+      "imageHint": "gym weights"
+    },
+    {
       "id": "testimonial-1",
       "description": "Portrait of a smiling man",
       "imageUrl": "https://images.unsplash.com/photo-1583195763986-0231686dcd43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk4NjMwOTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
