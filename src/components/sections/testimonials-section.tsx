@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils"
 import { TestimonialCard, TestimonialAuthor } from "@/components/ui/testimonial-card"
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const testimonials: Array<{
   author: TestimonialAuthor
@@ -11,7 +10,6 @@ const testimonials: Array<{
     author: {
       name: "Shaik Mazher Ali",
       role: "Member",
-      image: PlaceHolderImages.find(img => img.id === 'testimonial-1')?.imageUrl || "https://picsum.photos/seed/t1/100/100",
     },
     text: "It's the best gym in Sangareddy, that's worth its value, spacious and clean. The vibe is fantastic. Perfect place to workout."
   },
@@ -19,7 +17,6 @@ const testimonials: Array<{
     author: {
       name: "Rahul Adyanthaya",
       role: "Member",
-      image: PlaceHolderImages.find(img => img.id === 'testimonial-2')?.imageUrl || "https://picsum.photos/seed/t2/100/100",
     },
     text: "Be Fit stands out as one of the best gyms in the area, offering top-notch equipment and a well-maintained workout environment."
   },
@@ -27,7 +24,6 @@ const testimonials: Array<{
     author: {
       name: "Rishit Karia",
       role: "Member",
-      image: PlaceHolderImages.find(img => img.id === 'testimonial-5')?.imageUrl || "https://picsum.photos/seed/t5/100/100",
     },
     text: "One of the best gyms I have been to. Well-maintained equipment, great trainers, friendly staff and at a reasonable price. 10/10 recommended!"
   },
@@ -35,7 +31,6 @@ const testimonials: Array<{
     author: {
       name: "Gym Member",
       role: "Member",
-      image: PlaceHolderImages.find(img => img.id === 'testimonial-6')?.imageUrl || "https://picsum.photos/seed/t6/100/100",
     },
     text: "The best place to workout with all high-class facilities and equipment!"
   },

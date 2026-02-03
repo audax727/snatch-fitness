@@ -1,11 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export type TestimonialAuthor = {
   name: string;
   role: string;
-  image: string;
 };
 
 interface TestimonialCardProps {
@@ -22,13 +20,6 @@ export function TestimonialCard({ author, text, href, className }: TestimonialCa
         <p>"{text}"</p>
       </div>
       <div className="flex items-center gap-3 pt-6 mt-auto">
-        <Image
-          src={author.image}
-          alt={author.name}
-          width={40}
-          height={40}
-          className="h-10 w-10 rounded-full object-cover"
-        />
         <div className="flex flex-col">
           <div className="font-headline font-semibold tracking-tight">{author.name}</div>
           <div className="text-sm leading-5 text-muted-foreground">{author.role}</div>
