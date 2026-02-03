@@ -19,8 +19,8 @@ export function TestimonialCard({ author, text, href, className }: TestimonialCa
       <div className="flex-grow font-body text-base">
         <p>"{text}"</p>
       </div>
-      <div className="flex items-center gap-3 pt-6 mt-auto">
-        <div className="flex flex-col">
+      <div className="flex items-center justify-center gap-3 pt-6 mt-auto">
+        <div className="flex flex-col text-center">
           <div className="font-headline font-semibold tracking-tight">{author.name}</div>
           <div className="text-sm leading-5 text-muted-foreground">{author.role}</div>
         </div>
