@@ -35,7 +35,7 @@ export default function InsideBefitSection() {
                         height={400}
                         className={cn(
                             "w-full h-full",
-                            image.id === 'inside-4' ? 'object-contain bg-black' : 'object-cover'
+                            (image.id === 'inside-4' || image.id === 'inside-5') ? 'object-contain bg-black' : 'object-cover'
                         )}
                         data-ai-hint={image.imageHint}
                         loading="lazy"
