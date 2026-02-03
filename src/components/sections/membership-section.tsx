@@ -94,8 +94,10 @@ export default function MembershipSection() {
               <CardHeader className="text-center">
                 <CardTitle className="font-accent text-2xl sm:text-3xl font-bold uppercase text-primary">{plan.name}</CardTitle>
                 <div className="py-4">
-                  <span className="font-accent text-4xl sm:text-5xl font-extrabold text-white">{plan.price}</span>
-                  {plan.original_price && <span className="text-lg text-neutral-400 line-through ml-2">{plan.original_price}</span>}
+                  <div className="flex items-baseline justify-center gap-2">
+                    <span className="font-accent text-4xl sm:text-5xl font-extrabold text-white">{plan.price}</span>
+                    {plan.original_price && <span className="text-base text-neutral-400 line-through">{plan.original_price}</span>}
+                  </div>
                 </div>
               </CardHeader>
               <CardContent className="flex-grow">
