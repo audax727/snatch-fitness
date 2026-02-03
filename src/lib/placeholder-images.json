@@ -25,18 +25,6 @@
       "imageHint": "strength training"
     },
     {
-      "id": "inside-4",
-      "description": "A person doing a workout with a kettlebell.",
-      "imageUrl": "https://images.unsplash.com/photo-1623804446998-602878295993?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxrZXR0bGViZWxsJTIwd29ya291dHxlbnwwfHx8fDE3Njk4NjcxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "kettlebell workout"
-    },
-    {
-      "id": "inside-5",
-      "description": "The reception area of the gym.",
-      "imageUrl": "https://images.unsplash.com/photo-1693214674477-1159bddf1598?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxneW0lMjByZWNlcHRpb258ZW58MHx8fHwxNzY5ODAwMTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "gym reception"
-    },
-    {
       "id": "testimonial-1",
       "description": "Portrait of a smiling man",
       "imageUrl": "https://images.unsplash.com/photo-1583195763986-0231686dcd43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk4NjMwOTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
