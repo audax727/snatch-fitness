@@ -18,6 +18,11 @@ const navItems = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,7 +94,7 @@ export default function Header() {
             <Link href="#membership">Join Now</Link>
           </Button>
           <div className="md:hidden">
-            <MobileMenu />
+            {isMounted && <MobileMenu />}
           </div>
         </div>
       </div>
