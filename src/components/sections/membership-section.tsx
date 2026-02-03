@@ -8,7 +8,7 @@ import Link from 'next/link';
 const plans = [
   {
     name: "1 Month",
-    price: "₹2,500",
+    price: "₹2,000",
     features: [
       "Gym Access",
       "Basic Equipment",
@@ -19,8 +19,20 @@ const plans = [
   },
   {
     name: "3 Months",
-    price: "₹6,999",
-    original_price: "₹7,500",
+    price: "₹4,500",
+    original_price: "₹6,000",
+    features: [
+      "Full Gym Access",
+      "All Equipment",
+      "Group Classes"
+    ],
+    cta: "Choose Plan",
+    popular: false
+  },
+  {
+    name: "6 Months",
+    price: "₹6,500",
+    original_price: "₹12,000",
     features: [
       "Full Gym Access",
       "All Equipment",
@@ -32,9 +44,9 @@ const plans = [
     popular: true
   },
   {
-    name: "12 Months",
-    price: "₹20,999",
-    original_price: "₹30,000",
+    name: "1 Year",
+    price: "₹9,999",
+    original_price: "₹24,000",
     features: [
       "Unlimited Gym Access",
       "Priority Equipment",
@@ -67,7 +79,7 @@ export default function MembershipSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           {plans.map((plan) => (
             <Card
               key={plan.name}
