@@ -2,10 +2,10 @@ import { Award, Clock, TrendingUp, Users } from 'lucide-react';
 import AnimatedCounter from '@/components/animated-counter';
 
 const stats = [
-  { icon: Users, number: 500, label: 'Active Members' },
+  { icon: Users, number: 100, label: 'Active Members' },
   { icon: Award, number: 10, label: 'Expert Trainers' },
-  { icon: TrendingUp, number: 5000, label: 'Transformations' },
-  { icon: Clock, number: 24, label: 'Access Available' },
+  { icon: TrendingUp, number: 1000, label: 'Transformations' },
+  { icon: Clock, number: 18, label: 'Access Available' },
 ];
 
 export default function AboutSection() {
@@ -28,7 +28,7 @@ export default function AboutSection() {
               </div>
               <div className="font-accent font-bold text-4xl sm:text-5xl text-white">
                 <AnimatedCounter target={stat.number} />
-                {stat.number === 24 ? '/7' : '+'}
+                {stat.number === 24 ? '/7' : (stat.icon === Clock ? ' Hours' : '+')}
               </div>
               <p className="font-body text-neutral-400 mt-2">{stat.label}</p>
             </div>
