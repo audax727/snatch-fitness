@@ -1,5 +1,6 @@
 import { Award, Clock, TrendingUp, Users } from 'lucide-react';
 import AnimatedCounter from '@/components/animated-counter';
+import { cn } from '@/lib/utils';
 
 const stats = [
   { icon: Users, number: 100, label: 'Active Members' },
@@ -26,7 +27,10 @@ export default function AboutSection() {
               <div className="flex justify-center mb-4">
                 <stat.icon className="h-12 w-12 text-primary" />
               </div>
-              <div className="font-accent font-bold text-4xl sm:text-5xl text-white">
+              <div className={cn(
+                "font-accent font-bold text-white",
+                stat.icon === Clock ? "text-3xl sm:text-4xl" : "text-4xl sm:text-5xl"
+              )}>
                 <AnimatedCounter target={stat.number} />
                 {stat.number === 24 ? '/7' : (stat.icon === Clock ? ' hours/day' : '+')}
               </div>
