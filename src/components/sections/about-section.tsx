@@ -28,7 +28,7 @@ export default function AboutSection() {
               </div>
               <div className="font-accent font-bold text-4xl sm:text-5xl text-white">
                 <AnimatedCounter target={stat.number} />
-                {stat.number === 24 ? '/7' : (stat.icon === Clock ? ' Hours' : '+')}
+                {stat.number === 24 ? '/7' : (stat.icon === Clock ? ' hours/day' : '+')}
               </div>
               <p className="font-body text-neutral-400 mt-2">{stat.label}</p>
             </div>
