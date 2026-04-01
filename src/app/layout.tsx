@@ -3,8 +3,42 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Be Fit Gym - Sangareddy',
-  description: 'Premium fitness facility in Sangareddy with state-of-the-art equipment and expert trainers.',
+  metadataBase: new URL('https://befitsangareddy.in'),
+  title: {
+    default: 'Be Fit Gym - Sangareddy | Premium Fitness Facility',
+    template: '%s | Be Fit Gym',
+  },
+  description: 'Premium fitness facility in Sangareddy with state-of-the-art equipment, expert trainers, and dynamic classes.',
+  keywords: ['gym', 'fitness', 'Sangareddy', 'personal training', 'Be Fit', 'workout', 'health club'],
+  authors: [{ name: 'Be Fit Gym' }],
+  creator: 'Be Fit Gym',
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://befitsangareddy.in',
+    title: 'Be Fit Gym - Sangareddy | Premium Fitness Facility',
+    description: 'Premium fitness facility in Sangareddy with state-of-the-art equipment, expert trainers, and dynamic classes.',
+    siteName: 'Be Fit Gym',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Be Fit Gym - Sangareddy',
+    description: 'Premium fitness facility in Sangareddy with state-of-the-art equipment, expert trainers, and dynamic classes.',
+  },
+  alternates: {
+    canonical: 'https://befitsangareddy.in',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
