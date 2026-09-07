@@ -11,9 +11,9 @@ export default {
     extend: {
       fontFamily: {
         body: ['Excon', 'Poppins', 'sans-serif'],
-        headline: ['Tanker', 'sans-serif'],
-        accent: ['Tanker', 'sans-serif'],
-        tanker: ['Tanker', 'sans-serif'],
+        headline: ['Clash Display', 'sans-serif'],
+        accent: ['Clash Display', 'sans-serif'],
+        clash: ['Clash Display', 'sans-serif'],
         excon: ['Excon', 'sans-serif'],
       },
       colors: {

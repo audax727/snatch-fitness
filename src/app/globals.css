@@ -4,13 +4,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tanker Font - Headings & Highlights */
+/* Clash Display Font - Headings & Highlights */
 @font-face {
-  font-family: 'Tanker';
-  src: url('/fonts/Tanker-Regular.woff2') format('woff2'),
-       url('/fonts/Tanker-Regular.woff') format('woff'),
-       url('/fonts/Tanker-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Extralight.woff') format('woff'),
+       url('/fonts/ClashDisplay-Extralight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Light.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Light.woff') format('woff'),
+       url('/fonts/ClashDisplay-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Regular.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Regular.woff') format('woff'),
+       url('/fonts/ClashDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Medium.woff') format('woff'),
+       url('/fonts/ClashDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Semibold.woff') format('woff'),
+       url('/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Bold.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Bold.woff') format('woff'),
+       url('/fonts/ClashDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -67,13 +117,13 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Tanker', 'Montserrat', sans-serif;
-    letter-spacing: 0.04em;
+    font-family: 'Clash Display', 'Montserrat', sans-serif;
+    letter-spacing: 0.02em;
   }
   
-  .font-headline, .font-accent, .font-tanker {
-    font-family: 'Tanker', 'Montserrat', sans-serif;
-    letter-spacing: 0.04em;
+  .font-headline, .font-accent, .font-clash {
+    font-family: 'Clash Display', 'Montserrat', sans-serif;
+    letter-spacing: 0.02em;
   }
 
   .font-body, .font-excon {
