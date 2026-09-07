@@ -11,8 +11,9 @@ export default {
     extend: {
       fontFamily: {
         body: ['Poppins', 'sans-serif'],
-        headline: ['Montserrat', 'sans-serif'],
-        accent: ['Oswald', 'sans-serif'],
+        headline: ['Tanker', 'Montserrat', 'sans-serif'],
+        accent: ['Tanker', 'Oswald', 'sans-serif'],
+        tanker: ['Tanker', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
