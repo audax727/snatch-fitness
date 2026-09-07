@@ -11,9 +11,9 @@ export default {
     extend: {
       fontFamily: {
         body: ['Paquito', 'Poppins', 'sans-serif'],
-        headline: ['Boxing', 'sans-serif'],
-        accent: ['Boxing', 'sans-serif'],
-        boxing: ['Boxing', 'sans-serif'],
+        headline: ['Tanker', 'sans-serif'],
+        accent: ['Tanker', 'sans-serif'],
+        tanker: ['Tanker', 'sans-serif'],
         paquito: ['Paquito', 'sans-serif'],
       },
       colors: {
