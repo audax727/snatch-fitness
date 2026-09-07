@@ -10,11 +10,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Paquito', 'Poppins', 'sans-serif'],
+        body: ['Excon', 'Poppins', 'sans-serif'],
         headline: ['Tanker', 'sans-serif'],
         accent: ['Tanker', 'sans-serif'],
         tanker: ['Tanker', 'sans-serif'],
-        paquito: ['Paquito', 'sans-serif'],
+        excon: ['Excon', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

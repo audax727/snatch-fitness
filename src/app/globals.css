@@ -15,32 +15,42 @@
   font-display: swap;
 }
 
-/* Paquito Font - Body & Normal Text */
+/* Excon Font - Body & Normal Text */
 @font-face {
-  font-family: 'Paquito';
-  src: url('/fonts/Paquito-Regular.woff2') format('woff2'),
-       url('/fonts/Paquito-Regular.woff') format('woff'),
-       url('/fonts/Paquito-Regular.ttf') format('truetype');
+  font-family: 'Excon';
+  src: url('/fonts/Excon-Light.woff2') format('woff2'),
+       url('/fonts/Excon-Light.woff') format('woff'),
+       url('/fonts/Excon-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Excon';
+  src: url('/fonts/Excon-Regular.woff2') format('woff2'),
+       url('/fonts/Excon-Regular.woff') format('woff'),
+       url('/fonts/Excon-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Paquito';
-  src: url('/fonts/Paquito-Medium.woff2') format('woff2'),
-       url('/fonts/Paquito-Medium.woff') format('woff'),
-       url('/fonts/Paquito-Medium.ttf') format('truetype');
+  font-family: 'Excon';
+  src: url('/fonts/Excon-Medium.woff2') format('woff2'),
+       url('/fonts/Excon-Medium.woff') format('woff'),
+       url('/fonts/Excon-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Paquito';
-  src: url('/fonts/Paquito-Bold.woff2') format('woff2'),
-       url('/fonts/Paquito-Bold.woff') format('woff'),
-       url('/fonts/Paquito-Bold.ttf') format('truetype');
+  font-family: 'Excon';
+  src: url('/fonts/Excon-Bold.woff2') format('woff2'),
+       url('/fonts/Excon-Bold.woff') format('woff'),
+       url('/fonts/Excon-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -52,7 +62,7 @@
   }
 
   body {
-    font-family: 'Paquito', 'Poppins', sans-serif;
+    font-family: 'Excon', 'Poppins', sans-serif;
     @apply bg-background text-foreground;
   }
 
@@ -66,8 +76,8 @@
     letter-spacing: 0.04em;
   }
 
-  .font-body, .font-paquito {
-    font-family: 'Paquito', 'Poppins', sans-serif;
+  .font-body, .font-excon {
+    font-family: 'Excon', 'Poppins', sans-serif;
   }
 
   :root {
