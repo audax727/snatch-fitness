@@ -2,12 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Boxing Font - Headings & Highlights */
 @font-face {
-  font-family: 'Tanker';
-  src: url('/fonts/Tanker-Regular.woff2') format('woff2'),
-       url('/fonts/Tanker-Regular.woff') format('woff'),
-       url('/fonts/Tanker-Regular.ttf') format('truetype');
+  font-family: 'Boxing';
+  src: url('/fonts/Boxing-Regular.woff2') format('woff2'),
+       url('/fonts/Boxing-Regular.woff') format('woff'),
+       url('/fonts/Boxing-Regular.ttf') format('truetype');
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Paquito Font - Body & Normal Text */
+@font-face {
+  font-family: 'Paquito';
+  src: url('/fonts/Paquito-Regular.woff2') format('woff2'),
+       url('/fonts/Paquito-Regular.woff') format('woff'),
+       url('/fonts/Paquito-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Paquito';
+  src: url('/fonts/Paquito-Medium.woff2') format('woff2'),
+       url('/fonts/Paquito-Medium.woff') format('woff'),
+       url('/fonts/Paquito-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Paquito';
+  src: url('/fonts/Paquito-Bold.woff2') format('woff2'),
+       url('/fonts/Paquito-Bold.woff') format('woff'),
+       url('/fonts/Paquito-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -17,14 +49,23 @@
     @apply scroll-smooth;
   }
 
+  body {
+    font-family: 'Paquito', 'Poppins', sans-serif;
+    @apply bg-background text-foreground;
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Tanker', 'Montserrat', sans-serif;
-    letter-spacing: 0.04em;
+    font-family: 'Boxing', sans-serif;
+    letter-spacing: 0.05em;
   }
   
-  .font-headline, .font-accent, .font-tanker {
-    font-family: 'Tanker', 'Montserrat', sans-serif;
-    letter-spacing: 0.04em;
+  .font-headline, .font-accent, .font-boxing {
+    font-family: 'Boxing', sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  .font-body, .font-paquito {
+    font-family: 'Paquito', 'Poppins', sans-serif;
   }
 
   :root {
@@ -83,9 +124,6 @@
 
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
 

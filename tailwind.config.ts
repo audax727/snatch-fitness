@@ -10,10 +10,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Poppins', 'sans-serif'],
-        headline: ['Tanker', 'Montserrat', 'sans-serif'],
-        accent: ['Tanker', 'Oswald', 'sans-serif'],
-        tanker: ['Tanker', 'sans-serif'],
+        body: ['Paquito', 'Poppins', 'sans-serif'],
+        headline: ['Boxing', 'sans-serif'],
+        accent: ['Boxing', 'sans-serif'],
+        boxing: ['Boxing', 'sans-serif'],
+        paquito: ['Paquito', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
