@@ -58,7 +58,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="text-2xl font-bold font-headline text-white">
-          BE <span className="text-primary">FIT</span>
+          SNATCH <span className="text-primary">FITNESS</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -81,7 +81,7 @@ export default function Header() {
                 <SheetContent side="right" className="w-full bg-black/95 p-6 text-white">
                   <div className="flex flex-col items-center justify-center h-full">
                     <Link href="/" className="mb-12 text-3xl font-bold font-headline text-white" onClick={() => setMobileMenuOpen(false)}>
-                      BE <span className="text-primary">FIT</span>
+                      SNATCH <span className="text-primary">FITNESS</span>
                     </Link>
                     <nav className="flex flex-col items-center gap-8 text-center">
                       <NavLinks onLinkClick={() => setMobileMenuOpen(false)} />

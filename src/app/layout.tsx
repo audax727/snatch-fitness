@@ -3,30 +3,30 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://befitsangareddy.in'),
+  metadataBase: new URL('https://snatchfitness.in'),
   title: {
-    default: 'Be Fit Gym - Sangareddy | Premium Fitness Facility',
-    template: '%s | Be Fit Gym',
+    default: 'Snatch Fitness - Sangareddy | Premium Fitness Facility',
+    template: '%s | Snatch Fitness',
   },
   description: 'Premium fitness facility in Sangareddy with state-of-the-art equipment, expert trainers, and dynamic classes.',
-  keywords: ['gym', 'fitness', 'Sangareddy', 'personal training', 'Be Fit', 'workout', 'health club'],
-  authors: [{ name: 'Be Fit Gym' }],
-  creator: 'Be Fit Gym',
+  keywords: ['gym', 'fitness', 'Sangareddy', 'personal training', 'Snatch Fitness', 'workout', 'health club'],
+  authors: [{ name: 'Snatch Fitness' }],
+  creator: 'Snatch Fitness',
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://befitsangareddy.in',
-    title: 'Be Fit Gym - Sangareddy | Premium Fitness Facility',
+    url: 'https://snatchfitness.in',
+    title: 'Snatch Fitness - Sangareddy | Premium Fitness Facility',
     description: 'Premium fitness facility in Sangareddy with state-of-the-art equipment, expert trainers, and dynamic classes.',
-    siteName: 'Be Fit Gym',
+    siteName: 'Snatch Fitness',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Be Fit Gym - Sangareddy',
+    title: 'Snatch Fitness - Sangareddy',
     description: 'Premium fitness facility in Sangareddy with state-of-the-art equipment, expert trainers, and dynamic classes.',
   },
   alternates: {
-    canonical: 'https://befitsangareddy.in',
+    canonical: 'https://snatchfitness.in',
   },
   robots: {
     index: true,

@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { Phone, MapPin } from 'lucide-react';
 
 export default function LocationSection() {
-  const gmapsUrl = "https://maps.google.com/maps?q=17.5913423,78.0754515&t=&z=15&ie=UTF8&iwloc=&output=embed";
+  const gmapsUrl = "https://maps.google.com/maps?q=17.6254461,78.0722742&t=&z=17&ie=UTF8&iwloc=&output=embed";
+  const gmapsPlaceUrl = "https://www.google.com/maps/place/SNATCH+FITNESS/@17.6254512,78.0696993,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcbf9005dec1b9b:0x89aa50b76e1d229e!8m2!3d17.6254461!4d78.0722742!16s%2Fg%2F11nq8vv3vb?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D";
 
   return (
     <section id="contact" className="bg-neutral-100 py-20 sm:py-28">
@@ -24,7 +25,7 @@ export default function LocationSection() {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Be Fit Gym Location"
+                title="Snatch Fitness Location"
               ></iframe>
             </div>
           </div>
@@ -42,13 +43,12 @@ export default function LocationSection() {
                    <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                    <div>
                       <h3 className="font-headline text-xl font-semibold text-neutral-800">Phone</h3>
-                      <p>+91 9966509990</p>
-                      <p>+91 7644019999</p>
+                      <p>+91 9866786782</p>
                    </div>
                 </div>
               </div>
               <Button asChild size="lg" className="mt-8 w-full">
-                <Link href="https://www.google.com/maps/dir/?api=1&destination=17.5913423,78.0754515" target="_blank" rel="noopener noreferrer">
+                <Link href={gmapsPlaceUrl} target="_blank" rel="noopener noreferrer">
                   Get Directions
                 </Link>
               </Button>

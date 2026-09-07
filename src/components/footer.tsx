@@ -7,10 +7,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <h3 className="text-2xl font-bold font-headline text-white mb-4">
-              BE <span className="text-primary">FIT</span>
+              SNATCH <span className="text-primary">FITNESS</span>
             </h3>
             <p className="font-body text-sm text-neutral-400">
-              STAY FIT WITH BE - FIT. Sangareddy's premier fitness destination.
+              STAY FIT WITH SNATCH FITNESS. Sangareddy's premier fitness destination.
             </p>
           </div>
           <div>
@@ -30,13 +30,12 @@ export default function Footer() {
             </ul>
              <h4 className="font-headline text-lg font-bold text-white mt-4 mb-2">Contact</h4>
             <ul className="space-y-2 font-body text-sm">
-              <li>+91 9966509990</li>
-              <li>+91 7644019999</li>
+              <li>+91 9866786782</li>
             </ul>
           </div>
         </div>
         <div className="mt-12 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-500 font-body">
-          <p>&copy; {new Date().getFullYear()} Be Fit Gym. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Snatch Fitness. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

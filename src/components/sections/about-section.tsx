@@ -18,7 +18,7 @@ export default function AboutSection() {
             Where <span className="text-primary">Champions</span> Are Made
           </h2>
           <p className="mt-4 font-body text-lg text-neutral-300">
-            Be Fit is Sangareddy's premier fitness destination, offering world-class equipment, certified trainers, and a community dedicated to excellence. We don't just build bodies - we transform lives.
+            Snatch Fitness is Sangareddy's premier fitness destination, offering world-class equipment, certified trainers, and a community dedicated to excellence. We don't just build bodies - we transform lives.
           </p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">

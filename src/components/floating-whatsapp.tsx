@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 
 export default function FloatingWhatsapp() {
-  const whatsappMessage = "Hi, I'm interested in joining Be Fit Gym. Can you provide more information about membership plans?";
+  const whatsappMessage = "Hi, I'm interested in joining Snatch Fitness. Can you provide more information about membership plans?";
   const encodedMessage = encodeURIComponent(whatsappMessage);
-  const whatsappUrl = `https://wa.me/919966509990?text=${encodedMessage}`;
+  const whatsappUrl = `https://wa.me/919866786782?text=${encodedMessage}`;
 
   return (
     <Link

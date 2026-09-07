@@ -4,10 +4,10 @@ import { Phone } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CtaSection() {
-  const whatsappMessage = "Hi, I'm interested in joining Be Fit Gym. Can you provide more information about membership plans?";
+  const whatsappMessage = "Hi, I'm interested in joining Snatch Fitness. Can you provide more information about membership plans?";
   const encodedMessage = encodeURIComponent(whatsappMessage);
-  const whatsappUrl = `https://wa.me/919966509990?text=${encodedMessage}`;
-  const phoneUrl = "tel:+919966509990";
+  const whatsappUrl = `https://wa.me/919866786782?text=${encodedMessage}`;
+  const phoneUrl = "tel:+919866786782";
 
   return (
     <section className="py-20 sm:py-28 bg-gradient-to-r from-primary via-red-700 to-red-800 text-white">

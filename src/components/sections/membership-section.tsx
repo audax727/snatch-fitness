@@ -60,9 +60,9 @@ const plans = [
 ];
 
 export default function MembershipSection() {
-  const whatsappNumber = "919966509990";
+  const whatsappNumber = "919866786782";
   const getWhatsappUrl = (planName: string) => {
-    const message = `Hi, I'm interested in the ${planName} plan at Be Fit Gym. Can you provide more information?`;
+    const message = `Hi, I'm interested in the ${planName} plan at Snatch Fitness. Can you provide more information?`;
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
   };
