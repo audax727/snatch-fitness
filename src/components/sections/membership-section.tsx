@@ -8,7 +8,7 @@ import Link from 'next/link';
 const plans = [
   {
     name: "1 Month",
-    price: "₹2,000",
+    price: "₹1,500",
     features: [
       "Gym Access",
       "Basic Equipment",

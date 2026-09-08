@@ -6,7 +6,7 @@ const stats = [
   { icon: Users, number: 100, label: 'Active Members' },
   { icon: Award, number: 10, label: 'Expert Trainers' },
   { icon: TrendingUp, number: 1000, label: 'Transformations' },
-  { icon: Clock, number: 18, label: 'Access Available' },
+  { icon: Clock, number: 10, label: 'Access Available' },
 ];
 
 export default function AboutSection() {
