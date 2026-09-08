@@ -1,113 +1,309 @@
-import { cn } from "@/lib/utils"
-import { TestimonialCard, TestimonialAuthor } from "@/components/ui/testimonial-card"
+"use client";
 
-const testimonials: Array<{
-  author: TestimonialAuthor
-  text: string
-  href?: string
-}> = [
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
+import Link from "next/link";
+import { Star } from "lucide-react";
+
+const testimonials = [
   {
-    author: {
-      name: "Harish Hari",
-      role: "3 reviews · 2 months ago",
-      rating: 5
-    },
-    text: "Gym located in calm and peaceful environment. Trainer is very professional and friendly, understands every client’s body and designs workouts accordingly."
+    quote: "Gym located in calm and peaceful environment. Trainer is very professional and friendly, understands every client’s body and designs workouts accordingly.",
+    author: "Harish Hari",
+    role: "3 reviews · 2 months ago",
+    company: "Google Review ★★★★★",
   },
   {
-    author: {
-      name: "Âravind Ãru",
-      role: "2 reviews · 2 months ago",
-      rating: 5
-    },
-    text: "Clean, well-equipped gym with a positive environment. The trainer provides excellent guidance and motivation."
+    quote: "Clean, well-equipped gym with a positive environment. The trainer provides excellent guidance and motivation.",
+    author: "Âravind Ãru",
+    role: "2 reviews · 2 months ago",
+    company: "Google Review ★★★★★",
   },
   {
-    author: {
-      name: "Mounika Pilli",
-      role: "1 review · 2 months ago",
-      rating: 5
-    },
-    text: "Proper guidance by trainer, clean and friendly atmosphere,well equipped gym,,👍"
+    quote: "Proper guidance by trainer, clean and friendly atmosphere, well equipped gym 👍",
+    author: "Mounika Pilli",
+    role: "1 review · 2 months ago",
+    company: "Google Review ★★★★★",
   },
   {
-    author: {
-      name: "SUDEEP SAGAR BUKKINENI",
-      role: "1 review · 2 weeks ago",
-      rating: 5
-    },
-    text: "I’ve had a great experience training here. My trainer (Satish Anna) is very supportive, knowledgeable, and gives proper attention to technique and form. He understands individual goals and guides me accordingly."
+    quote: "I’ve had a great experience training here. My trainer (Satish Anna) is very supportive, knowledgeable, and gives proper attention to technique and form. He understands individual goals and guides me accordingly.",
+    author: "SUDEEP SAGAR BUKKINENI",
+    role: "1 review · 2 weeks ago",
+    company: "Google Review ★★★★★",
   },
   {
-    author: {
-      name: "Krishnakant Kishlay",
-      role: "1 review · 5 photos · 4 weeks ago",
-      rating: 5
-    },
-    text: "One of the best gym🏋️‍♂️ in sangareddy👍 Instructor has a lot of experience and is very humble Gym is well equiped"
+    quote: "One of the best gym 🏋️‍♂️ in sangareddy 👍 Instructor has a lot of experience and is very humble Gym is well equiped",
+    author: "Krishnakant Kishlay",
+    role: "1 review · 5 photos · 4 weeks ago",
+    company: "Google Review ★★★★★",
   },
   {
-    author: {
-      name: "Venkat goud",
-      role: "1 review · 4 weeks ago",
-      rating: 5
-    },
-    text: "Trainer is so friendly"
+    quote: "Trainer is so friendly",
+    author: "Venkat goud",
+    role: "1 review · 4 weeks ago",
+    company: "Google Review ★★★★★",
   },
   {
-    author: {
-      name: "SRINIVAS SALLAWAR",
-      role: "4 reviews · 3 photos · a month ago",
-      rating: 5
-    },
-    text: "I highly recommend this gym. Trainer Satish is very professional, friendly, and provides excellent training guidance. He pays close attention to each member and motivates everyone to achieve their fitness goals."
+    quote: "I highly recommend this gym. Trainer Satish is very professional, friendly, and provides excellent training guidance. He pays close attention to each member and motivates everyone to achieve their fitness goals.",
+    author: "SRINIVAS SALLAWAR",
+    role: "4 reviews · 3 photos · a month ago",
+    company: "Google Review ★★★★★",
   },
 ];
 
 export default function TestimonialsSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
   const gmapsPlaceUrl = "https://www.google.com/maps/place/SNATCH+FITNESS/@17.6254512,78.0696993,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcbf9005dec1b9b:0x89aa50b76e1d229e!8m2!3d17.6254461!4d78.0722742!16s%2Fg%2F11nq8vv3vb?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D";
-  const title = "Google Reviews";
-  const description = "See what our members are saying about their experiences at Snatch Fitness.";
+
+  // Mouse position for magnetic effect
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 25, stiffness: 200 };
+  const x = useSpring(mouseX, springConfig);
+  const y = useSpring(mouseY, springConfig);
+
+  // Transform for parallax on the large number
+  const numberX = useTransform(x, [-200, 200], [-20, 20]);
+  const numberY = useTransform(y, [-200, 200], [-10, 10]);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (rect) {
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      mouseX.set(e.clientX - centerX);
+      mouseY.set(e.clientY - centerY);
+    }
+  };
+
+  const goNext = () => setActiveIndex((prev) => (prev + 1) % testimonials.length);
+  const goPrev = () => setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+
+  useEffect(() => {
+    const timer = setInterval(goNext, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const current = testimonials[activeIndex];
 
   return (
-    <section id="testimonials" className={cn(
-      "bg-black text-white",
-      "py-20 sm:py-28"
-    )}>
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-16 text-center">
-        <div className="flex flex-col items-center gap-4 px-4">
-          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase">
-            Member <span className="text-primary">Reviews</span>
-          </h2>
-          <p className="mt-4 font-body text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto">
-            {description}
-          </p>
-        </div>
+    <section id="testimonials" className="relative bg-[#000000] text-[#fffef7] py-24 sm:py-32 overflow-hidden border-t border-neutral-900">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={containerRef} className="relative w-full max-w-5xl mx-auto" onMouseMove={handleMouseMove}>
+          {/* Oversized index number - positioned to bleed off left edge */}
+          <motion.div
+            className="absolute -left-6 sm:-left-12 top-1/2 -translate-y-1/2 text-[16rem] sm:text-[24rem] md:text-[28rem] font-headline font-bold text-white/[0.04] select-none pointer-events-none leading-none tracking-tighter"
+            style={{ x: numberX, y: numberY }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={activeIndex}
+                initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
+                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="block"
+              >
+                {String(activeIndex + 1).padStart(2, "0")}
+              </motion.span>
+            </AnimatePresence>
+          </motion.div>
 
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-          <div className="group flex w-full overflow-hidden [--gap:1rem] sm:[--gap:1.5rem] [--duration:30s]">
-            <div className="flex shrink-0 animate-marquee [gap:var(--gap)] group-hover:[animation-play-state:paused]">
-              {testimonials.map((testimonial, i) => (
-                <TestimonialCard 
-                  key={`testimonial-a-${i}`}
-                  href={gmapsPlaceUrl}
-                  {...testimonial}
+          {/* Main content - asymmetric layout */}
+          <div className="relative flex flex-col md:flex-row gap-8 md:gap-0">
+            {/* Left column - vertical text */}
+            <div className="flex md:flex-col items-center justify-between md:justify-center pr-0 md:pr-12 border-b md:border-b-0 md:border-r border-neutral-800 pb-6 md:pb-0">
+              <motion.span
+                className="text-xs font-headline font-bold text-[#aaaaaa] tracking-[0.3em] uppercase md:[writing-mode:vertical-rl] md:[text-orientation:mixed]"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                MEMBER REVIEWS
+              </motion.span>
+
+              {/* Vertical progress line */}
+              <div className="relative h-px w-24 md:h-32 md:w-px bg-neutral-800 mt-0 md:mt-8">
+                <motion.div
+                  className="absolute top-0 left-0 h-full md:w-full bg-primary origin-left md:origin-top"
+                  animate={{
+                    width: `${((activeIndex + 1) / testimonials.length) * 100}%`,
+                    height: `${((activeIndex + 1) / testimonials.length) * 100}%`,
+                  }}
+                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 />
-              ))}
+              </div>
             </div>
-            <div className="flex shrink-0 animate-marquee [gap:var(--gap)] group-hover:[animation-play-state:paused]" aria-hidden="true">
-              {testimonials.map((testimonial, i) => (
-                <TestimonialCard 
-                  key={`testimonial-b-${i}`}
-                  href={gmapsPlaceUrl}
-                  {...testimonial}
-                />
-              ))}
+
+            {/* Center - main content */}
+            <div className="flex-1 pl-0 md:pl-16 py-4 sm:py-8">
+              {/* Badge */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeIndex}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.4 }}
+                  className="mb-8"
+                >
+                  <Link
+                    href={gmapsPlaceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-excon text-[#ffd001] border border-[#ffd001]/30 rounded-[1440px] px-3.5 py-1.5 hover:bg-[#ffd001]/10 transition-colors"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-[#ffd001] animate-ping" />
+                    <span>{current.company}</span>
+                  </Link>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Quote with character/word reveal */}
+              <div className="relative mb-12 min-h-[160px] sm:min-h-[180px] flex items-center">
+                <AnimatePresence mode="wait">
+                  <motion.blockquote
+                    key={activeIndex}
+                    className="text-2xl sm:text-4xl md:text-5xl font-headline font-light text-[#fffef7] leading-[1.2] tracking-tight"
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    {current.quote.split(" ").map((word, i) => (
+                      <motion.span
+                        key={i}
+                        className="inline-block mr-[0.3em]"
+                        variants={{
+                          hidden: { opacity: 0, y: 20, rotateX: 90 },
+                          visible: {
+                            opacity: 1,
+                            y: 0,
+                            rotateX: 0,
+                            transition: {
+                              duration: 0.5,
+                              delay: i * 0.04,
+                              ease: [0.22, 1, 0.36, 1],
+                            },
+                          },
+                          exit: {
+                            opacity: 0,
+                            y: -10,
+                            transition: { duration: 0.2, delay: i * 0.01 },
+                          },
+                        }}
+                      >
+                        {word}
+                      </motion.span>
+                    ))}
+                  </motion.blockquote>
+                </AnimatePresence>
+              </div>
+
+              {/* Author row */}
+              <div className="flex flex-wrap items-end justify-between gap-6 pt-4 border-t border-neutral-900">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeIndex}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                    className="flex items-center gap-4"
+                  >
+                    {/* Animated line before name */}
+                    <motion.div
+                      className="w-8 h-px bg-primary"
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ duration: 0.6, delay: 0.3 }}
+                      style={{ originX: 0 }}
+                    />
+                    <div>
+                      <p className="text-lg font-headline font-bold text-[#fffef7]">{current.author}</p>
+                      <p className="text-xs text-[#aaaaaa] font-excon mt-0.5">{current.role}</p>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+
+                {/* Navigation controls */}
+                <div className="flex items-center gap-3">
+                  <motion.button
+                    onClick={goPrev}
+                    aria-label="Previous testimonial"
+                    className="group relative w-12 h-12 rounded-full border border-neutral-700 bg-neutral-900/60 flex items-center justify-center overflow-hidden hover:border-primary transition-colors"
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <motion.div
+                      className="absolute inset-0 bg-primary"
+                      initial={{ x: "-100%" }}
+                      whileHover={{ x: 0 }}
+                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    />
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      className="relative z-10 text-white transition-colors"
+                    >
+                      <path
+                        d="M10 12L6 8L10 4"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </motion.button>
+
+                  <motion.button
+                    onClick={goNext}
+                    aria-label="Next testimonial"
+                    className="group relative w-12 h-12 rounded-full border border-neutral-700 bg-neutral-900/60 flex items-center justify-center overflow-hidden hover:border-primary transition-colors"
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <motion.div
+                      className="absolute inset-0 bg-primary"
+                      initial={{ x: "100%" }}
+                      whileHover={{ x: 0 }}
+                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    />
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      className="relative z-10 text-white transition-colors"
+                    >
+                      <path
+                        d="M6 4L10 8L6 12"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </motion.button>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/4 bg-gradient-to-r from-black sm:block z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/4 bg-gradient-to-l from-black sm:block z-10" />
+          {/* Bottom ticker - subtle repeating background text */}
+          <div className="mt-16 overflow-hidden opacity-[0.06] pointer-events-none select-none">
+            <motion.div
+              className="flex whitespace-nowrap text-5xl sm:text-6xl font-headline font-bold uppercase tracking-widest text-white"
+              animate={{ x: [0, -1200] }}
+              transition={{ duration: 25, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+            >
+              {[...Array(8)].map((_, i) => (
+                <span key={i} className="mx-6">
+                  SNATCH FITNESS • GOOGLE REVIEWS • SANGAREDDY •
+                </span>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
