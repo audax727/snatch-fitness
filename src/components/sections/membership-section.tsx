@@ -20,7 +20,6 @@ const plans = [
   {
     name: "3 Months",
     price: "₹4,500",
-    original_price: "₹6,000",
     features: [
       "Full Gym Access",
       "All Equipment",
@@ -32,7 +31,6 @@ const plans = [
   {
     name: "6 Months",
     price: "₹6,500",
-    original_price: "₹12,000",
     features: [
       "Full Gym Access",
       "All Equipment",
@@ -46,7 +44,6 @@ const plans = [
   {
     name: "1 Year",
     price: "₹9,999",
-    original_price: "₹24,000",
     features: [
       "Unlimited Gym Access",
       "Priority Equipment",
@@ -96,7 +93,6 @@ export default function MembershipSection() {
                 <div className="py-4">
                   <div className="flex items-baseline justify-center gap-2">
                     <span className="font-accent text-4xl font-extrabold text-white">{plan.price}</span>
-                    {plan.original_price && <span className="text-base text-neutral-400 line-through">{plan.original_price}</span>}
                   </div>
                 </div>
               </CardHeader>
