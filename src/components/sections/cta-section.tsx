@@ -10,7 +10,7 @@ export default function CtaSection() {
   const phoneUrl = "tel:+919866786782";
 
   return (
-    <section className="py-20 sm:py-28 bg-gradient-to-r from-primary via-red-700 to-red-800 text-white">
+    <section className="py-20 sm:py-28 bg-gradient-to-r from-primary via-orange-600 to-amber-700 text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase">
           Ready to Start Your Transformation?
