@@ -15,18 +15,19 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-headline text-lg font-bold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2 font-body">
+            <ul className="space-y-2 font-body text-sm">
               <li><Link href="#about" className="hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="#facilities" className="hover:text-primary transition-colors">Facilities</Link></li>
+              <li><Link href="#inside-befit" className="hover:text-primary transition-colors">Gallery</Link></li>
               <li><Link href="#membership" className="hover:text-primary transition-colors">Membership</Link></li>
-              <li><Link href="#contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="#testimonials" className="hover:text-primary transition-colors">Reviews</Link></li>
+              <li><Link href="#contact" className="hover:text-primary transition-colors">Location</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-headline text-lg font-bold text-white mb-4">Hours</h4>
+            <h4 className="font-headline text-lg font-bold text-white mb-4">Gym Hours</h4>
             <ul className="space-y-2 font-body text-sm">
-              <li>Monday - Saturday: 5:00 AM - 10:00 PM</li>
-              <li>Sunday: 6:00 AM - 8:00 PM</li>
+              <li><span className="font-semibold text-white">Morning Session:</span> 5:30 AM - 10:00 AM</li>
+              <li><span className="font-semibold text-white">Evening Session:</span> 5:00 PM - 10:30 PM</li>
             </ul>
              <h4 className="font-headline text-lg font-bold text-white mt-4 mb-2">Contact</h4>
             <ul className="space-y-2 font-body text-sm">

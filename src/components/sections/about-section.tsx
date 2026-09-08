@@ -15,10 +15,10 @@ export default function AboutSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-white uppercase">
-            Where <span className="text-primary">Champions</span> Are Made
+            BUILT FOR <span className="text-primary">PERFORMANCE</span>
           </h2>
           <p className="mt-4 font-body text-lg text-neutral-300">
-            Snatch Fitness is Sangareddy's premier fitness destination, offering world-class equipment, certified trainers, and a community dedicated to excellence. We don't just build bodies - we transform lives.
+            Snatch Fitness is Sangareddy's premier gym destination, equipped for serious strength, conditioning, and transformation.
           </p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">

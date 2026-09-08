@@ -3,7 +3,6 @@ import Footer from '@/components/footer';
 import FloatingWhatsapp from '@/components/floating-whatsapp';
 import HeroSection from '@/components/sections/hero-section';
 import AboutSection from '@/components/sections/about-section';
-import FacilitiesSection from '@/components/sections/facilities-section';
 import InsideBefitSection from '@/components/sections/inside-befit-section';
 import MembershipSection from '@/components/sections/membership-section';
 import LocationSection from '@/components/sections/location-section';
@@ -17,7 +16,6 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
-        <FacilitiesSection />
         <InsideBefitSection />
         <MembershipSection />
         <TestimonialsSection />

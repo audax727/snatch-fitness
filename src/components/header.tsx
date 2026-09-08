@@ -9,10 +9,10 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { href: '#about', label: 'About' },
-  { href: '#facilities', label: 'Facilities' },
+  { href: '#inside-befit', label: 'Gallery' },
   { href: '#membership', label: 'Membership' },
-  { href: '#testimonials', label: 'Testimonials' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#testimonials', label: 'Reviews' },
+  { href: '#contact', label: 'Location' },
 ];
 
 const NavLinks = ({ onLinkClick }: { onLinkClick?: () => void }) => (

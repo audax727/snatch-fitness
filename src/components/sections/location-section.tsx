@@ -11,7 +11,7 @@ export default function LocationSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-neutral-900 uppercase">
-            <span className="text-primary">Find</span> Us
+            OUR <span className="text-primary">LOCATION</span>
           </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
@@ -30,8 +30,8 @@ export default function LocationSection() {
             </div>
           </div>
           <div className="lg:col-span-2">
-            <div className="h-full flex flex-col">
-              <div className="space-y-4 font-body text-neutral-700">
+            <div className="h-full flex flex-col justify-between">
+              <div className="space-y-6 font-body text-neutral-700">
                 <div className="flex items-start gap-3">
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
@@ -44,6 +44,14 @@ export default function LocationSection() {
                    <div>
                       <h3 className="font-headline text-xl font-semibold text-neutral-800">Phone</h3>
                       <p>+91 9866786782</p>
+                   </div>
+                </div>
+                <div className="flex items-start gap-3">
+                   <div className="h-6 w-6 text-primary mt-1 flex-shrink-0 font-bold text-center">⏰</div>
+                   <div>
+                      <h3 className="font-headline text-xl font-semibold text-neutral-800">Gym Timings</h3>
+                      <p><span className="font-semibold text-neutral-900">Morning:</span> 5:30 AM - 10:00 AM</p>
+                      <p><span className="font-semibold text-neutral-900">Evening:</span> 5:00 PM - 10:30 PM</p>
                    </div>
                 </div>
               </div>

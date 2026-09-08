@@ -72,10 +72,10 @@ export default function MembershipSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-white uppercase">
-            Choose Your <span className="text-primary">Plan</span>
+            MEMBERSHIP <span className="text-primary">PLANS</span>
           </h2>
           <p className="mt-4 font-body text-lg text-neutral-300">
-            Flexible options to fit your fitness goals and lifestyle.
+            Flexible membership options designed to fit your fitness goals and budget.
           </p>
         </div>
 

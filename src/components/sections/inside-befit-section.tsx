@@ -13,10 +13,10 @@ export default function InsideBefitSection() {
         <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-white uppercase">
-                Inside <span className="text-primary">Snatch Fitness</span>
+                EXPLORE THE <span className="text-primary">GYM</span>
             </h2>
             <p className="mt-4 font-body text-lg text-neutral-300">
-                A glimpse into where you'll transform.
+                A look inside our training space, free weights, and cardio equipment.
             </p>
             </div>
         </div>
