@@ -2,87 +2,75 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A modern gym interior with various equipment.",
-      "imageUrl": "https://images.unsplash.com/photo-1597076537061-a6b58163aa45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxneW0lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjY1NzQ3MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Modern fitness gym interior with heavy dumbbells and barbell equipment",
+      "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
       "imageHint": "gym interior"
     },
     {
       "id": "inside-1",
-      "description": "View of gym equipment from above.",
-      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipMG5qzQI7eLEW54xQZQBQx2xspjgZ4jn8_LzndK",
-      "imageHint": "gym equipment"
+      "description": "Professional power rack and barbell weight lifting area",
+      "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
+      "imageHint": "power rack weights"
     },
     {
       "id": "inside-2",
-      "description": "Treadmills and cardio area.",
-      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipNywqj2YYfhAQFxr6PV-V6A2e-nnGmGjfzeV07-",
-      "imageHint": "gym cardio"
+      "description": "Heavy dumbbell rack area and free weights training floor",
+      "imageUrl": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=1200&auto=format&fit=crop",
+      "imageHint": "dumbbell rack free weights"
     },
     {
       "id": "inside-3",
-      "description": "Strength training machines and weights area.",
-      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipM2G9r2W1WYhwcDEy8Re81doTcNwQ3W02TL5N7-",
-      "imageHint": "strength training"
+      "description": "Modern cardio zone with state-of-the-art treadmills and endurance gear",
+      "imageUrl": "https://images.unsplash.com/photo-1576678927484-cc909d51963a?q=80&w=1200&auto=format&fit=crop",
+      "imageHint": "cardio treadmills"
     },
     {
       "id": "inside-4",
-      "description": "Gym interior view with equipment",
-      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipPrM9lh9wTa6sfGBVfII65Z7wokxMsCmxbx4wNG",
-      "imageHint": "gym equipment"
+      "description": "Athlete performing intense strength training with barbell",
+      "imageUrl": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop",
+      "imageHint": "barbell workout athlete"
     },
     {
       "id": "inside-5",
-      "description": "Dumbbell rack",
-      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipPs2akhWZrL2OMXzbsHK_BVa2aWAIFFSYRFaoWi",
-      "imageHint": "gym weights"
+      "description": "Cable crossover machine and functional training equipment",
+      "imageUrl": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1200&auto=format&fit=crop",
+      "imageHint": "cable machine functional training"
     },
     {
       "id": "testimonial-1",
-      "description": "Portrait of a smiling man",
-      "imageUrl": "https://images.unsplash.com/photo-1583195763986-0231686dcd43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk4NjMwOTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man portrait"
+      "description": "Portrait of a dedicated male fitness athlete",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+      "imageHint": "fitness athlete portrait"
     },
     {
       "id": "testimonial-2",
-      "description": "Portrait of a smiling woman",
-      "imageUrl": "https://images.unsplash.com/photo-1557053910-d9eadeed1c58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2OTgzOTYyNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman portrait"
+      "description": "Portrait of an active male fitness enthusiast",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+      "imageHint": "man smiling portrait"
     },
     {
       "id": "testimonial-3",
-      "description": "Portrait of a person",
-      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY5Nzc3ODYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person portrait"
+      "description": "Portrait of an athletic female gym member",
+      "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+      "imageHint": "athletic woman portrait"
     },
     {
       "id": "testimonial-4",
-      "description": "Portrait of a smiling person",
-      "imageUrl": "https://images.unsplash.com/photo-1607529378676-a20456ee2f6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2OTgyMjUxOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person smiling"
+      "description": "Portrait of a motivated male gym member",
+      "imageUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=600&auto=format&fit=crop",
+      "imageHint": "young man fitness portrait"
     },
     {
       "id": "testimonial-5",
-      "description": "Portrait of a young person",
-      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx5b3VuZyUyMHBlcnNvbnxlbnwwfHx8fDE3Njk4NjE2MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "young person"
+      "description": "Portrait of a powerlifter athlete",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
+      "imageHint": "athlete man portrait"
     },
     {
       "id": "testimonial-6",
-      "description": "Portrait of an athlete",
-      "imageUrl": "https://images.unsplash.com/photo-1695918425283-eb385c012b7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhdGhsZXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY5ODQwMDg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "athlete portrait"
-    },
-    {
-      "id": "testimonial-7",
-      "description": "Portrait of a man",
-      "imageUrl": "https://images.unsplash.com/photo-1607031542107-f6f46b5d54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk4NjMwOTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man portrait"
-    },
-    {
-      "id": "testimonial-8",
-      "description": "Portrait of a woman",
-      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2OTgzOTYyNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman portrait"
+      "description": "Portrait of an athletic member",
+      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+      "imageHint": "fitness member portrait"
     }
   ]
 }
