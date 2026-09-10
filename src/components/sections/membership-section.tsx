@@ -86,7 +86,7 @@ export default function MembershipSection() {
               )}
             >
               {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#048A47] text-white font-bold px-3 py-1">MOST POPULAR</Badge>
+                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground font-bold">MOST POPULAR</Badge>
               )}
               <CardHeader className="text-center">
                 <CardTitle className="font-accent text-2xl sm:text-3xl font-bold uppercase text-primary">{plan.name}</CardTitle>
@@ -100,7 +100,7 @@ export default function MembershipSection() {
                 <ul className="space-y-4 font-body text-neutral-300">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-3">
-                      <Check className="h-5 w-5 text-[#048A47]" />
+                      <Check className="h-5 w-5 text-primary" />
                       <span>{feature}</span>
                     </li>
                   ))}

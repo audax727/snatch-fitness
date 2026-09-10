@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050A14] text-neutral-300 py-12 border-t border-[#1B2945]">
+    <footer className="bg-black text-neutral-300 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>
@@ -35,13 +35,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
-        {/* Minimalist Tiranga Divider */}
-        <div className="mt-12 pt-8 border-t border-[#1B2945] flex flex-col items-center gap-4">
-          <div className="h-1 w-24 bg-gradient-to-r from-[#FF671F] via-white to-[#048A47] rounded-full" />
-          <div className="text-center text-sm text-neutral-500 font-body">
-            <p>&copy; {new Date().getFullYear()} Snatch Fitness. All Rights Reserved. 🇮🇳</p>
-          </div>
+        <div className="mt-12 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-500 font-body">
+          <p>&copy; {new Date().getFullYear()} Snatch Fitness. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

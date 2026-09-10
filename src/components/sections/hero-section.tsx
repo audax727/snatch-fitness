@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function HeroSection() {
-  const heroImage = PlaceHolderImages.find(img => img.id === 'inside-1') || PlaceHolderImages[0];
+  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-background') || PlaceHolderImages[0];
 
   return (
     <section id="home" className="relative min-h-[90vh] sm:min-h-screen w-full bg-[#000000] text-[#fffef7] flex flex-col justify-between pt-24 pb-12 sm:pt-32 sm:pb-16 overflow-hidden">
@@ -24,11 +24,8 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex flex-col justify-center max-w-5xl">
         {/* Eyebrow */}
-        <div className="mb-6 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D1628] border border-[#1B2945] text-xs font-excon uppercase tracking-widest text-neutral-300 w-fit">
-          <span className="w-2 h-2 rounded-full bg-[#FF671F]" />
-          <span className="w-2 h-2 rounded-full bg-white" />
-          <span className="w-2 h-2 rounded-full bg-[#048A47]" />
-          <span>SANGAREDDY, TELANGANA</span>
+        <div className="mb-4 text-xs sm:text-sm font-excon uppercase tracking-[0.25em] text-[#aaaaaa]">
+          SANGAREDDY, TELANGANA
         </div>
 
         {/* Minimal Display Headline */}
@@ -46,7 +43,7 @@ export default function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="rounded-[1440px] px-8 py-6 bg-[#FF671F] text-white hover:bg-[#E55610] font-headline text-base font-semibold transition-all duration-300 shadow-lg shadow-[#FF671F]/20"
+            className="rounded-[1440px] px-8 py-6 bg-[#fffef7] text-[#000000] hover:bg-primary hover:text-white font-headline text-base font-semibold transition-all duration-300 shadow-lg"
           >
             <Link href="#contact">Start Now</Link>
           </Button>
@@ -54,7 +51,7 @@ export default function HeroSection() {
             asChild
             size="lg"
             variant="outline"
-            className="rounded-[1440px] px-8 py-6 bg-transparent text-[#fffef7] border-[#048A47]/60 hover:border-[#048A47] hover:bg-[#048A47]/20 font-headline text-base transition-all duration-300"
+            className="rounded-[1440px] px-8 py-6 bg-transparent text-[#fffef7] border-[#fffef7]/30 hover:border-primary hover:bg-primary/20 font-headline text-base transition-all duration-300"
           >
             <Link href="#membership">View Membership</Link>
           </Button>
