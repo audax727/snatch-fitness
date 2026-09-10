@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Be Fit Gym - Sangareddy',
-    short_name: 'Be Fit Gym',
+    name: 'Snatch Fitness - Sangareddy',
+    short_name: 'Snatch Fitness',
     description: 'Premium fitness facility in Sangareddy with state-of-the-art equipment and expert trainers.',
     start_url: '/',
     display: 'standalone',
