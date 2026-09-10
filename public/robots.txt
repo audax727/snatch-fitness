@@ -1,5 +1,2 @@
 User-agent: *
 Allow: /
-Disallow: /private/
-
-Sitemap: https://snatchfitness.in/sitemap.xml
