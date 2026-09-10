@@ -3,10 +3,10 @@ import AnimatedCounter from '@/components/animated-counter';
 import { cn } from '@/lib/utils';
 
 const stats = [
-  { icon: Users, number: 100, label: 'Active Members' },
-  { icon: Award, number: 10, label: 'Expert Trainers' },
-  { icon: TrendingUp, number: 1000, label: 'Transformations' },
-  { icon: Clock, number: 10, label: 'Access Available' },
+  { icon: Users, number: 100, label: 'Active Members', color: 'text-[#FF671F]' },
+  { icon: Award, number: 10, label: 'Expert Trainers', color: 'text-white' },
+  { icon: TrendingUp, number: 1000, label: 'Transformations', color: 'text-[#048A47]' },
+  { icon: Clock, number: 10, label: 'Access Available', color: 'text-[#FF671F]' },
 ];
 
 export default function AboutSection() {
@@ -25,7 +25,7 @@ export default function AboutSection() {
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="flex justify-center mb-4">
-                <stat.icon className="h-12 w-12 text-primary" />
+                <stat.icon className={cn("h-12 w-12", stat.color)} />
               </div>
               <div className={cn(
                 "font-accent font-bold text-white",

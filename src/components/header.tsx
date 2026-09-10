@@ -53,9 +53,12 @@ export default function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled ? 'bg-black/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        scrolled ? 'bg-[#050A14]/90 backdrop-blur-md border-b border-[#1B2945] shadow-lg' : 'bg-transparent'
       )}
     >
+      {/* Minimalist Indian Flag Accent Bar */}
+      <div className="h-0.5 w-full bg-gradient-to-r from-[#FF671F] via-white to-[#048A47]" />
+
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="text-2xl font-bold font-headline text-white">
           SNATCH <span className="text-primary">FITNESS</span>
